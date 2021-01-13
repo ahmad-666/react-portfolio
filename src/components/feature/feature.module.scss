@@ -1,0 +1,25 @@
+@import '../../styles/colors.scss' ;
+.feature{
+    width: calc((100% - (3 * 4em) )/ 3);
+    height: auto;
+    margin: 2em;
+}
+.row{
+    display: flex;
+    align-items: center;
+}
+.icon{
+    color: rgb(228, 95, 47);
+}
+.title{
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: athenaRuby;
+    margin-left: .5em;
+    color: $textColor;
+}
+.content{
+    font-size: 1em;
+    color: $textGrey;
+    margin-top: .5em;
+}

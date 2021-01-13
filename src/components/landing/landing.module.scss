@@ -1,0 +1,66 @@
+@import '../../styles/colors.scss' ;
+@import '../../styles/variables.scss' ;
+.landing{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $sectionBgColor;
+    padding: $sectionPadding;
+}
+.content{
+    max-width: 50%;
+}
+.imgContainer{
+    flex-shrink: 0;
+    width: 25em;
+    height: 30em;
+}
+.titles{
+
+}
+.h5{
+    font-size: 4em;
+    color: $textColor;
+    font-weight: 700;
+    &:not(:first-child){margin-top: .5em;}
+    &::first-letter{text-transform: capitalize;}
+}
+.row{
+    display: flex;
+    align-items: center;
+}
+.h6{
+    color: $textSpecialColor;
+    font-size: inherit;
+    font-family: athenaRuby;
+    margin-left: .3em;
+    text-transform: uppercase;
+}
+.desc{
+    margin-top: 1.5em ;
+    font-size: 1em;
+    color: $textGrey;
+}
+.btn{
+    padding: .6em 1.5em;
+    background-color: transparent;
+    border: 1px solid $textSpecialColor ;
+    color: $textSpecialColor;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    margin-top: 1.5em;
+    cursor: pointer;
+    transition: all .3s linear;
+    &:hover{
+        background-color: darken($textSpecialColor,20%);
+        border: 1px solid transparent;
+        color: $textColor;
+    }
+}
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

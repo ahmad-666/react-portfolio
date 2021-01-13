@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    &::before,&::after{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+}
+html,body{
+    height: 100%;
+}
+@font-face{
+    font-family: sansCaption;
+    src: url('./assets/fonts/PTSansCaption-Regular.ttf');
+}
+@font-face{
+    font-family: athenaRuby;
+    src: url('./assets/fonts/AthenaRuby_b018.ttf');
+}
+body{
+    font-family: sansCaption;
+}

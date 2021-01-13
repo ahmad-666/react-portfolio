@@ -1,0 +1,38 @@
+[
+    {
+        "_id": "423cdnfds34823",
+        "icon": "fas headset",
+        "title": "feature#1",
+        "txt": "lorem ipsum lorem ipsum lorem ipsum"
+    },
+    {
+        "_id": "vcx5645asas",
+        "icon": "fas headset",
+        "title": "feature#2",
+        "txt": "lorem ipsum lorem ipsum lorem ipsum"
+    },
+    {
+        "_id": "cxz889kljkhdf",
+        "icon": "fas headset",
+        "title": "feature#3",
+        "txt": "lorem ipsum lorem ipsum lorem ipsum"
+    },
+    {
+        "_id": "543mjmcv2",
+        "icon": "fas headset",
+        "title": "feature#4",
+        "txt": "lorem ipsum lorem ipsum lorem ipsum"
+    },
+    {
+        "_id": "bcv8867dfsd",
+        "icon": "fas headset",
+        "title": "feature#5",
+        "txt": "lorem ipsum lorem ipsum lorem ipsum"
+    },
+    {
+        "_id": ";lk6576cvvcxv",
+        "icon": "fas headset",
+        "title": "feature#6",
+        "txt": "lorem ipsum lorem ipsum lorem ipsum"
+    }
+]

@@ -1,0 +1,29 @@
+@import '../../styles/colors.scss' ;
+@import '../../styles/variables.scss' ;
+.featuresContainer{
+    width: 100%;
+    height: auto;
+    padding: $sectionPadding;
+    background-color: $sectionBgColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.imgContainer{
+    flex: 3 1;
+    height: 30em;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.features{
+    flex: 10 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-left: 3em;
+}
