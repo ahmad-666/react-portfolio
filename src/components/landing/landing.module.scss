@@ -6,7 +6,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $sectionBgColor;
     padding: $sectionPadding;
 }
 .content{
@@ -21,7 +20,7 @@
 
 }
 .h5{
-    font-size: 4em;
+    font-size: $landingTitleFontSize;
     color: $textColor;
     font-weight: 700;
     &:not(:first-child){margin-top: .5em;}
@@ -40,7 +39,7 @@
 }
 .desc{
     margin-top: 1.5em ;
-    font-size: 1em;
+    font-size: $landingTextFontSize;
     color: $textGrey;
 }
 .btn{
@@ -48,7 +47,7 @@
     background-color: transparent;
     border: 1px solid $textSpecialColor ;
     color: $textSpecialColor;
-    font-size: 1.3em;
+    font-size: $landingTextFontSize;
     text-transform: uppercase;
     margin-top: 1.5em;
     cursor: pointer;

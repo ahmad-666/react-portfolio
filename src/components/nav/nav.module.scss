@@ -1,0 +1,28 @@
+@import '../../styles/variables.scss' ;
+@import '../../styles/colors.scss' ;
+.nav{
+    padding: $navPadding;
+    background-color: $navBgColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.logo{
+    width: 3em;
+    height: 3em;
+}
+.title{
+    font-size: $titleFontSize;
+    color: $textColor;
+    margin-left: .5em;
+}
+.navItems{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

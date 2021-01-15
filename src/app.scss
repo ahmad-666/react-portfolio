@@ -1,3 +1,4 @@
+@import './styles/colors.scss' ;
 *{
     box-sizing: border-box;
     padding: 0;
@@ -21,4 +22,13 @@ html,body{
 }
 body{
     font-family: sansCaption;
+    background-color: $sectionBgColor;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: athenaRuby;
+}
+a{
+    border:none;
+    outline: none;
+    text-decoration: none;
 }

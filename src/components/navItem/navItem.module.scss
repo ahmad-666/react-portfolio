@@ -1,0 +1,12 @@
+@import '../../styles/colors.scss';
+@import '../../styles/variables.scss';
+.navItem{
+    font-size: $textFontSize;
+    color: $textColor;
+    margin: 0 1.5em;
+    transition: all .3s linear;
+}
+.navItem.active{
+    color: $textSpecialColor;
+    border-bottom: 2px solid $textSpecialColor;
+}

@@ -1,4 +1,5 @@
 @import '../../styles/colors.scss' ;
+@import '../../styles/variables.scss';
 .feature{
     width: calc((100% - (3 * 4em) )/ 3);
     height: auto;
@@ -9,17 +10,17 @@
     align-items: center;
 }
 .icon{
-    color: rgb(228, 95, 47);
+    color:$orange;
 }
 .title{
-    font-size: 1.5em;
+    font-size: $titleFontSize;
     font-weight: 700;
     font-family: athenaRuby;
     margin-left: .5em;
     color: $textColor;
 }
 .content{
-    font-size: 1em;
+    font-size: $textFontSize;
     color: $textGrey;
     margin-top: .5em;
 }
