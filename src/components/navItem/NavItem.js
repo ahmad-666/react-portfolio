@@ -5,7 +5,12 @@ import styles from './navItem.module.scss';
 
 const NavItem = ({ text, route }) => {
   return (
-    <NavLink to={route} className={styles.navItem}>
+    <NavLink
+      exact
+      to={route}
+      className={styles.navItem}
+      activeClassName={styles.active}
+    >
       {text}
     </NavLink>
   );

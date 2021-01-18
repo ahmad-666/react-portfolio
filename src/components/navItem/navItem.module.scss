@@ -4,7 +4,8 @@
     font-size: $textFontSize;
     color: $textColor;
     margin: 0 1.5em;
-    transition: all .3s linear;
+    border-bottom: 2px solid transparent;
+    transition: all .5s linear;
 }
 .navItem.active{
     color: $textSpecialColor;

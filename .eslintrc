@@ -36,6 +36,7 @@
       "react/button-has-type": "warn",
       "no-plusplus": "off",
       "react/default-props-match-prop-types": "warn",
+      "jsx-a11y/no-noninteractive-element-interactions": "off",
       "prettier/prettier": [
         "warn", {
           "semi": true, 

@@ -7,17 +7,17 @@ import logoImg from '../../assets/imgs/logo.png';
 const navItems = [
   {
     _id: 'd9038492njnf',
-    route: 'about',
+    route: '/',
     text: 'about us',
   },
   {
     _id: '312cv866',
-    route: 'contact',
+    route: '/contact',
     text: 'contact us',
   },
   {
     _id: 'vvcxFDSF3',
-    route: 'works',
+    route: '/works',
     text: 'our works',
   },
 ];

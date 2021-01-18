@@ -1,0 +1,35 @@
+@import '../../styles/colors.scss' ;
+@import '../../styles/variables.scss';
+.landing{
+    width: 100%;
+    height: 40em;
+    position: relative;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+.title{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: $textColor;
+    width: 100%;
+    padding: .5em;
+    font-size: $landingTitleFontSize - 1em;
+    z-index: 2;
+    text-align: center;
+    &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        background-color: rgba(0,0,0,.75);
+    }
+}
