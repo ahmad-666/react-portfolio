@@ -1,8 +1,10 @@
-const animationConfig = {
-  routingTime: 0.5,
-  waveTime: 1,
-  horizontalOffset: window.innerWidth / 5,
-};
+const ROUTING_TIME = 0.5;
+const WAVE_TIME = 1;
+const OFFSET_HORIZONTAL = window.innerWidth / 5;
+const IMG_ANIMATION_TIME = 0.5;
+const LAYER_TIME = 1.2;
+const LAYER_STAGGER = LAYER_TIME / 5;
+const WORKS_FADE_TIME = 0.65;
 export const pageAnimation = {
   initial: {
     y: '50vh',
@@ -12,16 +14,17 @@ export const pageAnimation = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: animationConfig.routingTime,
+      duration: ROUTING_TIME,
       ease: 'easeInOut',
-      when: 'beforeChildren',
+      staggerChildren: 0.25,
+      delayChildren: ROUTING_TIME,
     },
   },
   exit: {
     y: '-50vh',
     opacity: 0,
     transition: {
-      duration: animationConfig.routingTime,
+      duration: ROUTING_TIME,
       ease: 'easeInOut',
     },
   },
@@ -33,28 +36,25 @@ export const waveAnimation = {
   animate: {
     pathLength: 1,
     transition: {
-      duration: animationConfig.waveTime,
+      duration: WAVE_TIME,
       ease: 'easeInOut',
-      delay: animationConfig.routingTime,
     },
   },
 };
-
-export const landingParentAnimation = {
+export const landingTextParentAnimation = {
   initial: {},
   animate: {
     transition: {
       duration: 0,
-      when: 'beforeChildren',
-      staggerChildren: 0.25,
-      delayChildren: animationConfig.routingTime + animationConfig.waveTime,
+      staggerChildren: 0.15,
+      delayChildren: WAVE_TIME,
     },
   },
 };
-export const textHorizontalAnimation = {
+export const horizontalOffsetAnimation = {
   initial: {
     opacity: 0,
-    x: animationConfig.horizontalOffset,
+    x: OFFSET_HORIZONTAL,
   },
   animate: {
     opacity: 1,
@@ -65,45 +65,52 @@ export const textHorizontalAnimation = {
     },
   },
 };
-export const fadeInAnimation = {
+export const descParentAnime = {
+  initial: {},
+  animate: {
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: WAVE_TIME,
+    },
+  },
+};
+export const fadeIn = {
   initial: {
     opacity: 0,
   },
   animate: {
     opacity: 1,
     transition: {
-      duration: 0.75,
+      duration: 0.3,
+    },
+  },
+};
+export const imgParentAnimation = {
+  animate: {
+    transition: {
+      delayChildren: 0.75,
     },
   },
 };
 export const imgAnimation = {
   initial: {
-    opacity: 0,
     scale: 2,
+    opacity: 0,
   },
   animate: {
     scale: 1,
     opacity: 1,
     transition: {
-      duration: 1,
-      ease: 'circIn',
+      duration: IMG_ANIMATION_TIME,
     },
   },
-};
-export const worksParentAnimation = {
-  initial: {},
-  animate: {
-    transition: {
-      staggerChildren: 1.5,
-    },
-  },
-  exit: {},
 };
 export const layersParentAnimation = {
   initial: {},
   animate: {
     transition: {
-      staggerChildren: 0.25,
+      staggerChildren: LAYER_STAGGER,
+      delayChildren: 0,
     },
   },
 };
@@ -113,11 +120,119 @@ export const layerAnimation = {
     skew: '45deg',
   },
   animate: {
-    x: '100vw',
+    x: '200vw',
     skew: '0deg',
     transition: {
-      duration: 1,
+      duration: LAYER_TIME,
       ease: 'linear',
+    },
+  },
+};
+
+export const faqAnimation = {
+  initial: {
+    opacity: 0,
+    height: 0,
+  },
+  animate: {
+    opacity: 1,
+    height: 'auto',
+    transition: {
+      duration: 0.5,
+      ease: 'easeInOut',
+    },
+  },
+  exit: {
+    height: 0,
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+      ease: 'easeInOut',
+    },
+  },
+};
+export const faqsAnimation = {
+  initial: {
+    opacity: 0,
+    x: -OFFSET_HORIZONTAL,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+export const worksParentAnimation = {
+  initial: { opacity: 0, scale: 0.5 },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: WORKS_FADE_TIME,
+      delay: LAYER_TIME * 1.25,
+    },
+  },
+};
+export const workAnimation = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+export const lineAnimation = {
+  initial: {
+    originX: 'left',
+    scaleX: 0,
+  },
+  animate: {
+    scaleX: 1,
+    transition: {
+      duration: 0.5,
+      ease: 'easeInOut',
+    },
+  },
+};
+export const blackFilterAnimation = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: 'linear',
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+      ease: 'linear',
+    },
+  },
+};
+export const submitBtnAnimation = {
+  initial: { scale: 1 },
+  animate: {},
+  whileHover: {
+    scale: 1.2,
+    transition: {
+      type: 'spring',
+      stiffness: 150,
+      damping: 1.5,
+    },
+  },
+  whileTap: {
+    scale: 0.6,
+    transition: {
+      duration: 0.3,
     },
   },
 };

@@ -35,3 +35,25 @@ a{
 body.disableScroll{
     overflow: hidden;
 }
+body{
+    overflow-x: hidden;
+}
+button{
+    border:none ;
+    outline: none;
+    cursor: pointer;
+}
+label{
+    font-family: sansCaption;
+}
+input,textarea{
+    border:none;
+    outline: none;
+    &::placeholder{
+        font-family: sansCaption;
+    }
+    &:focus{
+        border:none;
+        outline: none;
+    }
+}

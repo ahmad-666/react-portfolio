@@ -1,17 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { motion, AnimatePresence } from 'framer-motion';
 import styles from './faq.module.scss';
+import { faqAnimation } from '../../animations/animation';
 
-const Faq = ({ question, answer }) => {
+const Faq = ({ question, answer, id }) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className={styles.faq}>
-      <div className={styles.row}>
+      <div
+        className={styles.row}
+        onClick={() => setIsOpen(currOpen => !currOpen)}
+      >
         <p className={styles.question}>{question}</p>
         <FontAwesomeIcon icon={faPlus} size='2x' className={styles.icon} />
       </div>
-      <p className={styles.answer}>{answer}</p>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.p
+            key={id}
+            variants={faqAnimation}
+            initial='initial'
+            animate='animate'
+            exit='exit'
+            className={styles.answer}
+          >
+            {answer}
+          </motion.p>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

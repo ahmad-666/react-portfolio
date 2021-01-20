@@ -1,11 +1,17 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 import styles from './workDetailActiveImg.module.scss';
+import { blackFilterAnimation } from '../../animations/animation';
 
 const WorkDetailActiveImg = ({ imgSrc, setActiveImg }) => {
   const blackFilterElm = useRef(null);
   return (
-    <div
+    <motion.div
+      variants={blackFilterAnimation}
+      initial='initial'
+      animate='animate'
+      exit='exit'
       ref={blackFilterElm}
       className={styles.blackFilter}
       onClick={e => {
@@ -16,7 +22,7 @@ const WorkDetailActiveImg = ({ imgSrc, setActiveImg }) => {
       }}
     >
       <img src={imgSrc} alt={imgSrc} className={styles.img} />
-    </div>
+    </motion.div>
   );
 };
 WorkDetailActiveImg.defaultProps = {

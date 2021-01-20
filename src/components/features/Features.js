@@ -1,11 +1,24 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 import styles from './features.module.scss';
 import Feature from '../feature/Feature';
 import featuresImg from '../../assets/imgs/features.jpg';
+import { faqsAnimation } from '../../animations/animation';
+import useScroll from '../../hooks/useScroll';
 
 const Features = ({ features, setFeatures }) => {
+  const [elm, animeControl] = useScroll(
+    {
+      threshold: 0.5,
+      triggerOnce: false,
+      delay: 0,
+      initialInView: false,
+    },
+    'initial',
+    'animate'
+  );
   useEffect(() => {
     const fetchFeatures = async () => {
       try {
@@ -18,7 +31,13 @@ const Features = ({ features, setFeatures }) => {
     fetchFeatures();
   }, []);
   return (
-    <div className={styles.featuresContainer}>
+    <motion.div
+      className={styles.featuresContainer}
+      ref={elm}
+      variants={faqsAnimation}
+      animate={animeControl}
+      initial='initial'
+    >
       <div className={styles.imgContainer}>
         <img className={styles.img} src={featuresImg} alt={featuresImg} />
       </div>
@@ -32,7 +51,7 @@ const Features = ({ features, setFeatures }) => {
           />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 Features.defaultProps = {

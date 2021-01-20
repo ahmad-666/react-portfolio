@@ -37,6 +37,7 @@
       "no-plusplus": "off",
       "react/default-props-match-prop-types": "warn",
       "jsx-a11y/no-noninteractive-element-interactions": "off",
+      "spaced-comment": "warn",
       "prettier/prettier": [
         "warn", {
           "semi": true, 

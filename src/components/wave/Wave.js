@@ -12,8 +12,6 @@ const Wave = () => {
     >
       <motion.path
         variants={waveAnimation}
-        initial='initial'
-        animate='animate'
         className={styles.path}
         fill='transparent'
         strokeWidth={10}

@@ -10,7 +10,7 @@ import {
   worksParentAnimation,
 } from '../../animations/animation';
 
-const layers = ['#5c6bc0', '#ffb74d', '#f06292'];
+const layers = ['#f48fb1 ', '#9fa8da', '#80cbc4', '#aed581'];
 const Works = () => {
   const [works, setWorks] = useState([]);
   useEffect(() => {
@@ -25,36 +25,43 @@ const Works = () => {
     fetchWorks();
   }, []);
   return (
-    <motion.div
-      variants={worksParentAnimation}
-      initial='initial'
-      animate='animate'
-      exit='exit'
-    >
-      <motion.div variants={layersParentAnimation}>
+    <>
+      <motion.div
+        variants={layersParentAnimation}
+        initial='initial'
+        animate='animate'
+      >
         {layers.map((layer, i) => (
           <motion.div
             variants={layerAnimation}
             key={i}
-            className={styles.layer}
             style={{ backgroundColor: layer }}
+            className={styles.layer}
           />
         ))}
       </motion.div>
-      <motion.div className={styles.worksContainer} variants={pageAnimation}>
-        <h5 className={styles.title}> our works </h5>
-        <div className={styles.works}>
-          {works.map(work => (
-            <Work
-              key={work._id}
-              title={work.title}
-              imgSrc={work.imgSrc}
-              _id={work._id}
-            />
-          ))}
-        </div>
+      <motion.div
+        className={styles.worksContainer}
+        variants={pageAnimation}
+        initial='initial'
+        animate='animate'
+        exit='exit'
+      >
+        <motion.div variants={worksParentAnimation}>
+          <h5 className={styles.title}> our works </h5>
+          <div className={styles.works}>
+            {works.map(work => (
+              <Work
+                key={work._id}
+                title={work.title}
+                imgSrc={work.imgSrc}
+                _id={work._id}
+              />
+            ))}
+          </div>
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </>
   );
 };
 export default Works;
