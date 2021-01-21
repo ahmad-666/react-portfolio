@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as Yup from 'yup';
 import { Formik, Form } from 'formik';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import styles from './contact.module.scss';
 import FormElm from '../../components/formElm/FormElm';
-import { pageAnimation, submitBtnAnimation } from '../../animations/animation';
+import {
+  pageAnimation,
+  submitBtnAnimation,
+  successAnimation,
+} from '../../animations/animation';
 
 const initialValues = {
   email: '',
@@ -18,14 +22,18 @@ const validationSchema = Yup.object({
     .matches(/^09\d{9}$/, 'enter valid mobile'),
   desc: Yup.string().max(100, 'description should be less than 100 characters'),
 });
-const onSubmit = async (values, submitProps) => {
-  // only enter to onSubmit if we dont have any error
-  setTimeout(() => {
-    submitProps.setSubmitting(false);
-    submitProps.resetForm();
-  }, 1000);
-};
+
 const Contact = () => {
+  const [showSuccess, setShowSuccess] = useState(false);
+  const onSubmit = async (values, submitProps) => {
+    // only enter to onSubmit if we dont have any error
+    setTimeout(() => {
+      submitProps.setSubmitting(false);
+      submitProps.resetForm();
+      setShowSuccess(true);
+      setTimeout(() => setShowSuccess(false), 2000);
+    }, 1000);
+  };
   return (
     <motion.div
       variants={pageAnimation}
@@ -86,6 +94,19 @@ const Contact = () => {
                 >
                   submit form
                 </motion.button>
+                <AnimatePresence>
+                  {showSuccess && (
+                    <motion.p
+                      className={styles.success}
+                      variants={successAnimation}
+                      initial='initial'
+                      animate='animate'
+                      exit='exit'
+                    >
+                      form submitted successfully
+                    </motion.p>
+                  )}
+                </AnimatePresence>
               </Form>
             );
           }}

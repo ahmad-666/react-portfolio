@@ -21,3 +21,8 @@
     height: 40em;
     object-fit: cover;
 }
+@media screen and (max-width:1250px){
+    .img{
+        height: 30em;
+    }
+}

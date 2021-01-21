@@ -9,7 +9,8 @@
     align-items: center;
 }
 .imgContainer{
-    flex: 3 1;
+    flex-shrink: 0;
+    width: 25em;
     height: 30em;
 }
 .img{
@@ -18,11 +19,21 @@
     object-fit: cover;
 }
 .features{
-    flex: 10 1;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
     align-content: flex-start;
     margin-left: 3em;
+}
+@media screen and (max-width:750px){
+    .featuresContainer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .features{
+        margin-left: 0em;
+    }
 }

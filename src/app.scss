@@ -23,6 +23,11 @@ html,body{
 body{
     font-family: sansCaption;
     background-color: $sectionBgColor;
+    overflow-x: hidden;
+    font-size: 15px;
+}
+body.disableScroll{
+    overflow: hidden;
 }
 h1,h2,h3,h4,h5,h6{
     font-family: athenaRuby;
@@ -32,19 +37,10 @@ a{
     outline: none;
     text-decoration: none;
 }
-body.disableScroll{
-    overflow: hidden;
-}
-body{
-    overflow-x: hidden;
-}
 button{
     border:none ;
     outline: none;
     cursor: pointer;
-}
-label{
-    font-family: sansCaption;
 }
 input,textarea{
     border:none;
@@ -55,5 +51,18 @@ input,textarea{
     &:focus{
         border:none;
         outline: none;
+    }
+}
+label{
+    font-family: sansCaption;
+}
+@media screen and (max-width:900px){
+    body{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:600px){
+    body{
+        font-size: 9px;
     }
 }

@@ -11,3 +11,9 @@
     color: $textSpecialColor;
     border-bottom: 2px solid $textSpecialColor;
 }
+@media screen and (max-width:400px){
+    .navItem{
+        margin: 0 .75em;
+       
+    }
+}

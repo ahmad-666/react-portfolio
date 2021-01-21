@@ -226,13 +226,35 @@ export const submitBtnAnimation = {
     transition: {
       type: 'spring',
       stiffness: 150,
-      damping: 1.5,
+      damping: 1,
     },
   },
   whileTap: {
-    scale: 0.6,
+    scale: 0.8,
     transition: {
-      duration: 0.3,
+      type: 'spring',
+      stiffness: 100,
+      damping: 8,
+    },
+  },
+};
+export const successAnimation = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: 100,
+    transition: {
+      duration: 0.5,
     },
   },
 };
