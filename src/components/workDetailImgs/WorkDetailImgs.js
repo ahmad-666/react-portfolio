@@ -8,7 +8,7 @@ const WorkDetailImgs = ({ imgs, setActiveImg }) => {
     <div className={styles.imgs}>
       {imgs.map((img, i) => (
         <img
-          src={img}
+          src={`${process.env.PUBLIC_URL}${img}`}
           alt={img}
           key={i}
           className={styles.img}

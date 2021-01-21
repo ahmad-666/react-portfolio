@@ -35,7 +35,11 @@ const Work = ({ _id, title, imgSrc }) => {
           initial='initial'
           animate={lineAnimationControl}
         />
-        <img src={imgSrc} alt={imgSrc} className={styles.img} />
+        <img
+          src={`${process.env.PUBLIC_URL}${imgSrc}`}
+          alt={imgSrc}
+          className={styles.img}
+        />
       </motion.div>
     </Link>
   );

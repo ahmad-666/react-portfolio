@@ -5,7 +5,11 @@ import styles from './workDetailLanding.module.scss';
 const WorkDetailLanding = ({ imgSrc, title }) => {
   return (
     <div className={styles.landing}>
-      <img src={imgSrc} alt={imgSrc} className={styles.img} />
+      <img
+        src={`${process.env.PUBLIC_URL}${imgSrc}`}
+        alt={imgSrc}
+        className={styles.img}
+      />
       <h2 className={styles.title}> {title} </h2>
     </div>
   );
