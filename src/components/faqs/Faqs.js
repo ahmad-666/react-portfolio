@@ -9,7 +9,9 @@ const Faqs = ({ faqs, setFaqs }) => {
   useEffect(() => {
     const fetchFaqs = async () => {
       try {
-        const faqsRes = await axios.get('/data/faqs.json');
+        const faqsRes = await axios.get(
+          `${process.env.PUBLIC_URL}/data/faqs.json`
+        );
         setFaqs(faqsRes.data);
       } catch (err) {
         console.error(err);

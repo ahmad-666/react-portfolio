@@ -22,7 +22,9 @@ const Features = ({ features, setFeatures }) => {
   useEffect(() => {
     const fetchFeatures = async () => {
       try {
-        const featuresRes = await axios.get('/data/features.json');
+        const featuresRes = await axios.get(
+          `${process.env.PUBLIC_URL}/data/features.json`
+        );
         setFeatures(featuresRes.data);
       } catch (err) {
         console.error(err);

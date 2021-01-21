@@ -16,7 +16,9 @@ const Works = () => {
   useEffect(() => {
     const fetchWorks = async () => {
       try {
-        const worksRes = await axios.get('/data/works.json');
+        const worksRes = await axios.get(
+          `${process.env.PUBLIC_URL}/data/works.json`
+        );
         setWorks(worksRes.data);
       } catch (err) {
         console.error(err);

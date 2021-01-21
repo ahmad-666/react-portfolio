@@ -16,7 +16,9 @@ const WorkDetail = () => {
   useEffect(() => {
     const fetchWork = async () => {
       try {
-        const workRes = await axios.get('/data/works.json');
+        const workRes = await axios.get(
+          `${process.env.PUBLIC_URL}/data/works.json`
+        );
         const works = workRes.data;
         const currWork = works.filter(w => w._id === params.id)[0];
         setWork(currWork);
