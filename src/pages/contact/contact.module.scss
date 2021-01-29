@@ -1,50 +1,50 @@
-@import '../../styles/colors.scss' ;
+@import '../../styles/colors.scss';
 @import '../../styles/variables.scss';
-.container{
-    width: 40em;
-    border-radius: 2em;
-    box-shadow: 0 0 1em rgba(0,0,0,.5);
-    position: relative;
-    left: 50%;
-    top: 3em;
-    transform: translateX(-50%);
-    overflow: hidden;
+.container {
+  width: 40em;
+  border-radius: 2em;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  position: relative;
+  left: 50%;
+  top: 3em;
+  transform: translateX(-50%);
+  overflow: hidden;
 }
-.title{
-    width: 100%;
-    text-align: center;
-    padding: 1em;
-    color: $textColor;
-    font-size: $titleFontSize;
-    font-weight: 700;
-    background-color: lighten($sectionBgColor,5%);
+.title {
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+  color: $textColor;
+  font-size: $titleFontSize;
+  font-weight: 700;
+  background-color: lighten($sectionBgColor, 5%);
 }
-.form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0em 5em;
-    background-color: darken($sectionBgColor,2%);
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0em 5em;
+  background-color: darken($sectionBgColor, 2%);
 }
-.submit{
-    padding: 1em 2em;
-    font-size: $textFontSize;
-    cursor: pointer;
-    background-color: $orange;
-    border-radius: 1.5em;
-    color: $textColor;
-    margin: 2em;
-    &:disabled{
-        cursor: auto;
-        background-color: rgb(180,180,180);
-    }
+.submit {
+  padding: 1em 2em;
+  font-size: $textFontSize;
+  cursor: pointer;
+  background-color: $orange;
+  border-radius: 1.5em;
+  color: $textColor;
+  margin: 2em;
+  &:disabled {
+    cursor: auto;
+    background-color: rgb(180, 180, 180);
+  }
 }
-.success{
-    display: table;
-    padding: .3em 1em;
-    border-radius: 1em;
-    background-color: $successColor;
-    color: $textColor;
-    font-size: $textFontSize;   
-    margin-bottom: 2em;
+.success {
+  display: table;
+  padding: 0.3em 1em;
+  border-radius: 1em;
+  background-color: $successColor;
+  color: $textColor;
+  font-size: $textFontSize;
+  margin-bottom: 2em;
 }

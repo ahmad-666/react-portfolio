@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,QAAQ,CAAA;EACJ,SAAS,EEEE,GAAG;EFDd,KAAK,ECHG,KAAgB;EDIxB,MAAM,EAAE,OAAO;EACf,aAAa,EAAE,qBAAqB;EACpC,UAAU,EAAE,cAAc;CAC7B;;AACD,AAAA,QAAQ,AAAA,OAAO,CAAA;EACX,KAAK,ECRU,OAAgB;EDS/B,aAAa,EAAE,GAAG,CAAC,KAAK,CCTT,OAAgB;CDUlC;;AACD,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EAC/B,AAAA,QAAQ,CAAA;IACJ,MAAM,EAAE,OAAO;GAElB",
+    "sources": [
+        "navItem.module.scss",
+        "../../styles/colors.scss",
+        "../../styles/variables.scss"
+    ],
+    "names": [],
+    "file": "navItem.module.css"
+}

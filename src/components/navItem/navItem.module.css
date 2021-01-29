@@ -1,0 +1,21 @@
+.navItem {
+  font-size: 1em;
+  color: white;
+  margin: 0 1.5em;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: all .5s linear;
+  -moz-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+.navItem.active {
+  color: #42db42;
+  border-bottom: 2px solid #42db42;
+}
+
+@media screen and (max-width: 400px) {
+  .navItem {
+    margin: 0 .75em;
+  }
+}
+/*# sourceMappingURL=navItem.module.css.map */

@@ -1,0 +1,51 @@
+.faq {
+  padding: 1em 0;
+}
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.row:hover .icon {
+  color: #e45f2f;
+}
+
+.question {
+  min-width: 1em;
+  max-width: 100%;
+  font-size: 1.7em;
+  color: white;
+}
+
+.icon {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  color: #42db42;
+  background-color: transparent;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.answer {
+  margin-top: 1em;
+  font-size: 1em;
+  color: #c8c8c8;
+}
+/*# sourceMappingURL=faq.module.css.map */

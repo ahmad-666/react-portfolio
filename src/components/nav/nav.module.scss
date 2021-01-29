@@ -1,44 +1,43 @@
-@import '../../styles/variables.scss' ;
-@import '../../styles/colors.scss' ;
-.nav{
-    padding: $navPadding;
-    background-color: $navBgColor;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 9;
+@import '../../styles/variables.scss';
+@import '../../styles/colors.scss';
+.nav {
+  padding: $navPadding;
+  background-color: $navBgColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 9;
 }
-.logoContainer{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.logoContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-.logo{
-    width: 3em;
-    height: 3em;
+.logo {
+  width: 3em;
+  height: 3em;
 }
-.title{
-    font-size: $titleFontSize;
-    color: $textColor;
-    margin-left: .5em;
+.title {
+  font-size: $titleFontSize;
+  color: $textColor;
+  margin-left: 0.5em;
 }
-.navItems{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.navItems {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-@media screen and (max-width:400px){
-    .nav{
-        padding: .5em 1em;
-    
-    }
-    .logo{
-        width: 2em;
-        height: 2em;
-    }
-    .title{
-        margin-left: .3em;
-    }
+@media screen and (max-width: 400px) {
+  .nav {
+    padding: 0.5em 1em;
+  }
+  .logo {
+    width: 2em;
+    height: 2em;
+  }
+  .title {
+    margin-left: 0.3em;
+  }
 }

@@ -1,0 +1,19 @@
+.worksContainer {
+  padding: 3em 5em;
+}
+
+.title {
+  color: #42db42;
+  font-weight: 700;
+  font-size: 3em;
+}
+
+.layer {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0%;
+  z-index: 1;
+}
+/*# sourceMappingURL=works.module.css.map */

@@ -1,23 +1,21 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useRef } from 'react';
 import './app.scss';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Nav from './components/nav/Nav';
-// import Home from './pages/home/Home';
-// import Works from './pages/works/Works';
-// import WorkDetail from './pages/workDetail/WorkDetail';
 import OnRouteChange from './components/onRouteChange/OnRouteChange';
 
 const Home = lazy(() => import('./pages/home/Home'));
 const Works = lazy(() => import('./pages/works/Works'));
 const WorkDetail = lazy(() => import('./pages/workDetail/WorkDetail'));
+
 const Contact = lazy(() => import('./pages/contact/Contact'));
 library.add(fas);
-
 function App() {
   const location = useLocation();
+  const elm = useRef();
   return (
     <div className='App'>
       <Nav />

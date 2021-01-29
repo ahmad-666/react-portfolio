@@ -39,17 +39,18 @@ const WorkDetail = () => {
       >
         {work && (
           <>
-            <WorkDetailLanding imgSrc={work.imgSrc} title={work.title} />
-            <WorkDetailInfo title={work.title} desc={work.desc} />
-            <WorkDetailImgs imgs={work.imgs} setActiveImg={setActiveImg} />
+            <WorkDetailLanding imgSrc={work.imgSrc} title={work.title} />{' '}
+            <WorkDetailInfo title={work.title} desc={work.desc} />{' '}
+            <WorkDetailImgs imgs={work.imgs} setActiveImg={setActiveImg} />{' '}
           </>
-        )}
-      </motion.div>
+        )}{' '}
+      </motion.div>{' '}
       <AnimatePresence>
+        {' '}
         {activeImg && (
           <WorkDetailActiveImg imgSrc={activeImg} setActiveImg={setActiveImg} />
-        )}
-      </AnimatePresence>
+        )}{' '}
+      </AnimatePresence>{' '}
     </>
   );
 };

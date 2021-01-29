@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,YAAY,CAAA;EACR,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;EACb,QAAQ,EAAE,KAAK;EACf,IAAI,EAAE,CAAC;EACP,GAAG,EAAE,CAAC;EACN,gBAAgB,ECDN,kBAAc;EDExB,OAAO,EAAE,EAAE;CACd;;AACD,AAAA,IAAI,CAAA;EACA,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,EAAE;EACX,QAAQ,EAAE,QAAQ;EAClB,IAAI,EAAE,GAAG;EACT,GAAG,EAAE,GAAG;EACR,SAAS,EAAE,qBAAoB;CAClC",
+    "sources": [
+        "workDetailActiveImg.module.scss",
+        "../../styles/colors.scss"
+    ],
+    "names": [],
+    "file": "workDetailActiveImg.module.css"
+}

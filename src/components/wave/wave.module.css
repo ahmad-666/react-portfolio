@@ -1,0 +1,15 @@
+.svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.path {
+  stroke-width: .4em;
+  stroke: #8263cc;
+  fill: transparent;
+}
+/*# sourceMappingURL=wave.module.css.map */

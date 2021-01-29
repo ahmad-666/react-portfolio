@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,KAAK,CAAA;EACD,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;CACtB;;AACD,AAAA,KAAK,CAAA;EACD,SAAS,ECHE,GAAG;EDId,KAAK,EENE,OAAgB;EFOvB,WAAW,EAAE,KAAK;EAClB,UAAU,EAAE,GAAG;CAClB",
+    "sources": [
+        "workDetailInfo.module.scss",
+        "../../styles/variables.scss",
+        "../../styles/colors.scss"
+    ],
+    "names": [],
+    "file": "workDetailInfo.module.css"
+}

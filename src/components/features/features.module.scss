@@ -1,39 +1,41 @@
-@import '../../styles/colors.scss' ;
-@import '../../styles/variables.scss' ;
-.featuresContainer{
-    width: 100%;
-    height: auto;
-    padding: $sectionPadding;
-    display: flex;
-    justify-content: space-between;
+@import '../../styles/colors.scss';
+@import '../../styles/variables.scss';
+.featuresContainer {
+  width: 100%;
+  height: auto;
+  padding: $sectionPadding;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.imgContainer {
+  flex-shrink: 0;
+  width: 25em;
+  height: 30em;
+  color: $orange;
+  background-color: crimson;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.features {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin-left: 3em;
+}
+@media screen and (max-width: 750px) {
+  .featuresContainer {
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-.imgContainer{
-    flex-shrink: 0;
-    width: 25em;
-    height: 30em;
-}
-.img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.features{
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    margin-left: 3em;
-}
-@media screen and (max-width:750px){
-    .featuresContainer{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .features{
-        margin-left: 0em;
-    }
+  }
+  .features {
+    margin-left: 0em;
+  }
 }

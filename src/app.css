@@ -1,0 +1,107 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*::before, *::after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+@font-face {
+  font-family: sansCaption;
+  src: url("./assets/fonts/PTSansCaption-Regular.ttf");
+}
+
+@font-face {
+  font-family: athenaRuby;
+  src: url("./assets/fonts/AthenaRuby_b018.ttf");
+}
+
+body {
+  font-family: sansCaption;
+  background-color: #141414;
+  overflow-x: hidden;
+  font-size: 15px;
+}
+
+body.disableScroll {
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: athenaRuby;
+}
+
+a {
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input, textarea {
+  border: none;
+  outline: none;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  font-family: sansCaption;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+  font-family: sansCaption;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  font-family: sansCaption;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  font-family: sansCaption;
+}
+
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  font-family: sansCaption;
+}
+
+input::placeholder, textarea::placeholder {
+  font-family: sansCaption;
+}
+
+input:focus, textarea:focus {
+  border: none;
+  outline: none;
+}
+
+label {
+  font-family: sansCaption;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 9px;
+  }
+}
+/*# sourceMappingURL=app.css.map */

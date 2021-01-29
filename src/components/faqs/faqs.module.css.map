@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,cAAc,CAAA;EACV,OAAO,ECHM,GAAG,CAAC,GAAG;CDIvB;;AACD,AAAA,MAAM,CAAA;EACF,SAAS,ECJU,GAAG;EDKtB,WAAW,EAAE,GAAG;EAChB,cAAc,EAAE,SAAS;EACzB,KAAK,EEPU,OAAgB;CFQlC",
+    "sources": [
+        "faqs.module.scss",
+        "../../styles/variables.scss",
+        "../../styles/colors.scss"
+    ],
+    "names": [],
+    "file": "faqs.module.css"
+}
