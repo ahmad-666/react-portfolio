@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useRef } from 'react';
+import React, { lazy, Suspense } from 'react';
 import './app.scss';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -15,7 +15,6 @@ const Contact = lazy(() => import('./pages/contact/Contact'));
 library.add(fas);
 function App() {
   const location = useLocation();
-  const elm = useRef();
   return (
     <div className='App'>
       <Nav />
